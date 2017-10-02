@@ -118,11 +118,16 @@ section::after {
   border-radius: 100%;
 }
 
-figure {
-  
-}
+/*.frame {
+  border: 6px solid red;
+  margin: 0;
+}*/
 
 .work-image {
   max-width: 300px;
   max-height: 225px;
+  border: 6px solid #fff;
+  border-radius: 2px;
+  /*box-shadow: 1px 4px 25px rgba(117,81,125,0.15);*/
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
