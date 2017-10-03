@@ -118,10 +118,14 @@ section::after {
   border-radius: 100%;
 }
 
-/*.frame {
-  border: 6px solid red;
-  margin: 0;
-}*/
+.work-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 .work-image {
   max-width: 300px;
