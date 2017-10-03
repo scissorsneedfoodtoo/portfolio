@@ -6,6 +6,13 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: #333333;
+  /*color: #2A333C;*/
+  font-size: 1.1em;
+  line-height: 1.6;
+  /*background-color: #fdfcf3;*/
+  /*background-color: #fffef7;*/
+  /*background-color: #fbfbff;*/
+  background-color: #fbfbfb;
 }
 
 header {
@@ -16,7 +23,6 @@ header {
 
 .header-text {
   display: flex;
-  /*background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/q_100/v1465191205/mountains_z9y8zo.jpg) center;*/
   position: absolute;
   top: 0;
   right: 0;
@@ -95,7 +101,17 @@ section {
   align-items: center;
 }
 
-section::after {
+/*section::after {
+  content: '';
+  border-bottom: 2px solid #dfe2e6;
+  width: 300px;
+  padding-top: 50px;
+  justify-content: center;
+  align-content: center;
+}*/
+
+/*for small grey line after sections that are not the last*/
+section:not(:last-child)::after {
   content: '';
   border-bottom: 2px solid #dfe2e6;
   width: 300px;
@@ -108,7 +124,7 @@ section::after {
   margin: 40px 0;
   text-align: center;
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 2.1em;
 }
 
 .selfie-pic {
@@ -118,20 +134,98 @@ section::after {
   border-radius: 100%;
 }
 
-.work-item {
+/*.work-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 40px;
+}*/
+
+.work-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  /*grid-template-rows: 50% 25% 25%;*/
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "pic"
+    "header"
+    "text";
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.work-item:last-child {
+  margin-bottom: 0;
 }
 
 .work-image {
-  max-width: 300px;
-  max-height: 225px;
+  /*max-width: 300px;
+  max-height: 225px;*/
+  max-width: 95%;
   border: 6px solid #fff;
   border-radius: 2px;
-  /*box-shadow: 1px 4px 25px rgba(117,81,125,0.15);*/
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  grid-area: "pic";
+}
+
+.work-title {
+  font-size: 1.7em;
+  margin: .75em 0 0 0;
+  grid-area: "header";
+}
+
+.work-description {
+  margin: 1em 0 1.2em 0;
+  grid-area: "text";
+}
+
+.contact-section {
+  text-align: center;
+  margin-bottom: 80px; /* extra white space at bottom */
+}
+
+.social-header {
+  margin: auto;
+  font-size: .95em;
+}
+
+.email {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.email-link {
+  margin-top: 10px;
+}
+
+.social {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link:first-of-type {
+  margin-top: 10px;
+}
+
+.social-link {
+  /*margin: 15px 0 0 0;*/
+  line-height: 2.3;
+}
+
+/*link styling*/
+
+a:link {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #333333;
 }
