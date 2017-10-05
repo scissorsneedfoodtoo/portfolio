@@ -50,7 +50,7 @@ nav span {
 
 nav a {
   /*color: rgba(0, 0, 0, 0.5);*/
-  font-size: 1em;
+  font-size: .9em;
   font-weight: 700;
   /*text-transform: uppercase;*/
   text-decoration: none;
@@ -167,18 +167,18 @@ section:not(:last-child)::after {
   border: 6px solid #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  grid-area: "pic";
+  grid-area: pic;
 }
 
 .work-title {
   font-size: 1.5em;
   margin: .75em 0 0 0;
-  grid-area: "header";
+  grid-area: header;
 }
 
 .work-description {
   margin: 1em 0 1.2em 0;
-  grid-area: "text";
+  grid-area: text;
 }
 
 .contact-section {
@@ -210,7 +210,7 @@ section:not(:last-child)::after {
 
 .social-header {
   margin: auto;
-  font-size: .95em;
+  /*font-size: .95em;*/
 }
 
 .social-link {
@@ -256,7 +256,8 @@ section:not(:last-child)::after {
   }
 
   nav {
-    font-size: 1.2em;
+    font-size: 1em;
+    max-width: 500px;
   }
 
   body {
@@ -283,38 +284,81 @@ section:not(:last-child)::after {
 
 @media (min-width: 780px) { /* restyle work section */
 
-  .work-item {
+  /*.work-item {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 120px;
     grid-template-areas:
-      "pic"
-      "header"
-      "text";
+      "pic header"
+      "pic text";
     text-align: center;
     margin: auto;
     margin-bottom: 40px;
+  }*/
+
+  .work-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pic text";
+    grid-column-gap: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  .work-item:nth-child(2n+2) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "text pic";
+    grid-column-gap: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    align-items: center;
   }
 
   .work-image {
-    max-width: 300px;
+    max-width: 350px;
     max-height: 225px;
     max-width: 95%;
     border: 6px solid #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    grid-area: "pic";
+    grid-area: pic;
+  }
+
+  /*.work-text {
+    grid-area: "text";
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "header"
+      "description";
+    align-items: center;
+  }*/
+
+  .work-text {
+    grid-area: text;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .work-title {
     font-size: 1.5em;
-    margin: .75em 0 0 0;
-    grid-area: "header";
+    /*margin: .75em 0 0 0;*/
+    grid-area: header;
   }
 
   .work-description {
-    margin: 1em 0 1.2em 0;
-    grid-area: "text";
+    /*margin: 1em 0 1.2em 0;*/
+    grid-area: description;
   }
 
 }
