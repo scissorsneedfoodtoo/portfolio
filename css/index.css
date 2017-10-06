@@ -137,7 +137,7 @@ section:not(:last-child)::after {
     "text";
   text-align: center;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .work-item:last-child {
@@ -270,27 +270,27 @@ section:not(:last-child)::after {
 
   .work-item {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
     grid-template-rows: auto;
     grid-template-areas:
       "pic text";
     grid-column-gap: 30px;
     text-align: center;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     align-items: center;
   }
 
   .work-item:nth-child(2n+2) {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
     grid-template-rows: auto;
     grid-template-areas:
       "text pic";
     grid-column-gap: 30px;
     text-align: center;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     align-items: center;
   }
 
@@ -336,7 +336,7 @@ section:not(:last-child)::after {
 @media (min-width: 960px) {
 
   section {
-    max-width: 700px;
+    max-width: 750px;
   }
 
   .work-image {
