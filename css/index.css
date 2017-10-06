@@ -6,19 +6,12 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: #333333;
-  /*color: #282F3A;*/
-  /*color: #2A333C;*/
   font-size: 1.1em;
   line-height: 1.6;
-  /*background-color: #fdfcf3;*/
-  /*background-color: #fffef7;*/
-  /*background-color: #fbfbff;*/
-  /*background-color: #fbfbfb;*/
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url(https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/q_100/v1465191205/mountains_z9y8zo.jpg);
-  /*background-position: center;*/
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url(../img/mountains.jpg);
   background-position: bottom;
   background-size: cover;
   height: 75vh;
@@ -49,10 +42,8 @@ nav span {
 }
 
 nav a {
-  /*color: rgba(0, 0, 0, 0.5);*/
   font-size: .9em;
   font-weight: 700;
-  /*text-transform: uppercase;*/
   text-decoration: none;
   color: white;
 }
@@ -77,7 +68,6 @@ nav a:hover {
   letter-spacing: 0.05em;
   margin: auto;
   margin-bottom: 15px;
-  /*z-index: 1;*/
 }
 
 .title span {
@@ -108,15 +98,6 @@ section {
   align-items: center;
 }
 
-/*section::after {
-  content: '';
-  border-bottom: 2px solid #dfe2e6;
-  width: 300px;
-  padding-top: 50px;
-  justify-content: center;
-  align-content: center;
-}*/
-
 /*for small grey line after sections that are not the last*/
 section:not(:last-child)::after {
   content: '';
@@ -142,10 +123,13 @@ section:not(:last-child)::after {
   border-radius: 100%;
 }
 
+.about-text p {
+  margin: 10px auto;
+}
+
 .work-item {
   display: grid;
   grid-template-columns: 1fr;
-  /*grid-template-rows: 50% 25% 25%;*/
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "pic"
@@ -284,18 +268,6 @@ section:not(:last-child)::after {
 
 @media (min-width: 780px) { /* restyle work section */
 
-  /*.work-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 120px;
-    grid-template-areas:
-      "pic header"
-      "pic text";
-    text-align: center;
-    margin: auto;
-    margin-bottom: 40px;
-  }*/
-
   .work-item {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -352,12 +324,10 @@ section:not(:last-child)::after {
 
   .work-title {
     font-size: 1.5em;
-    /*margin: .75em 0 0 0;*/
     grid-area: header;
   }
 
   .work-description {
-    /*margin: 1em 0 1.2em 0;*/
     grid-area: description;
   }
 
