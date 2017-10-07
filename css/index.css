@@ -110,7 +110,7 @@ section:not(:last-child)::after {
 }
 
 .section-header {
-  margin: 40px 0;
+  margin: 40px 0 50px 0;
   text-align: center;
   font-weight: bold;
   font-size: 2.1em;
@@ -155,7 +155,7 @@ section:not(:last-child)::after {
 }
 
 .work-title {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin: .75em 0 0 0;
   grid-area: header;
 }
@@ -323,7 +323,6 @@ section:not(:last-child)::after {
   }
 
   .work-title {
-    font-size: 1.5em;
     grid-area: header;
   }
 
