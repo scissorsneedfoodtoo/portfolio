@@ -269,7 +269,7 @@ section:not(:last-child)::after {
   }
 
   .social-link {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
 }
