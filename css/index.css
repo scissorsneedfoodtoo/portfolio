@@ -268,8 +268,13 @@ section:not(:last-child)::after {
     font-size: 1.5em;
   }
 
+  .social-header {
+    font-size: 1.1em;
+  }
+
   .social-link {
-    font-size: 2em;
+    margin: 10px 25px 0 25px;
+    font-size: 2.3em;
   }
 
 }
@@ -312,17 +317,6 @@ section:not(:last-child)::after {
     grid-area: pic;
   }
 
-  /*.work-text {
-    grid-area: "text";
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "header"
-      "description";
-    align-items: center;
-  }*/
-
   .work-text {
     grid-area: text;
     align-self: center;
@@ -344,6 +338,18 @@ section:not(:last-child)::after {
 
   section {
     max-width: 750px;
+  }
+
+  nav {
+    font-size: 1.2em;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .kicker {
+    font-size: 1.8em;
   }
 
   .work-image {
