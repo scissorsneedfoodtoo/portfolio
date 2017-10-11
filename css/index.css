@@ -113,7 +113,7 @@ section:not(:last-child)::after {
   margin: 40px 0 50px 0;
   text-align: center;
   font-weight: bold;
-  font-size: 2.1em;
+  font-size: 2em;
 }
 
 .selfie-pic {
@@ -236,20 +236,20 @@ section:not(:last-child)::after {
 @media (min-width: 760px) { /* about iPad resolution */
 
   .title {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   .kicker {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   nav {
-    font-size: 1em;
+    font-size: 1.1em;
     max-width: 500px;
   }
 
   body {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   section {
@@ -265,7 +265,7 @@ section:not(:last-child)::after {
   }
 
   .email-link {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .social-header {
@@ -342,14 +342,6 @@ section:not(:last-child)::after {
 
   nav {
     font-size: 1.2em;
-  }
-
-  .title {
-    font-size: 3em;
-  }
-
-  .kicker {
-    font-size: 1.8em;
   }
 
   .work-image {
