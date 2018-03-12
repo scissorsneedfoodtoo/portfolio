@@ -14,7 +14,7 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url(https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/c_scale,q_auto:eco,w_1920/v1465191205/mountains_z9y8zo.jpg);
   background-position: bottom;
   background-size: cover;
-  height: 75vh;
+  height: 90vh;
 }
 
 .header-text {
@@ -24,7 +24,7 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 75vh;
+  height: 90vh;
 }
 
 nav {
@@ -231,6 +231,24 @@ section:not(:last-child)::after {
 
 .contact-section a:hover {
   box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
+}
+
+/* for lazy loading images */
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 760px) { /* about iPad resolution */
