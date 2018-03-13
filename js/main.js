@@ -1,6 +1,5 @@
 // Get all of the images with the lazy load class name
 const images = document.querySelectorAll('.lazy-image');
-console.log(images)
 const config = {
   // If the image gets within 50px in the Y axis, start the download
   rootMargin: '50px 0px',
@@ -104,3 +103,10 @@ function applyImage(img, src) {
   img.src = src;
   img.classList.add('fade-in');
 }
+
+// images[0].addEventListener('load', function() {
+//   console.log(this.naturalWidth);
+//   console.log(this.naturalHeight);
+// });
+
+// console.log(images)

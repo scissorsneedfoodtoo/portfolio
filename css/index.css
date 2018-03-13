@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url(https://res.cloudinary.com/scissorsneedfoodtoo/image/upload/c_scale,q_auto:eco,w_1920/v1465191205/mountains_z9y8zo.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains.jpg');
   background-position: bottom;
   background-size: cover;
   height: 90vh;
@@ -118,6 +118,7 @@ section:not(:last-child)::after {
 
 .selfie-pic {
   max-width: 150px;
+  max-height: 150px;
   margin: 0 auto 30px;
   /*margin: auto;*/
   border-radius: 100%;
@@ -146,8 +147,7 @@ section:not(:last-child)::after {
 
 .work-image {
   max-width: 300px;
-  max-height: 225px;
-  max-width: 95%;
+  max-height: 200px;
   border: 6px solid #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -236,7 +236,7 @@ section:not(:last-child)::after {
 /* for lazy loading images */
 .fade-in {
   animation-name: fadeIn;
-  animation-duration: .6s;
+  animation-duration: 1.3s;
   animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
   animation-fill-mode: forwards;
 }
@@ -276,6 +276,7 @@ section:not(:last-child)::after {
 
   .selfie-pic {
     max-width: 180px;
+    max-height: 180px;
   }
 
   .section-header {
@@ -327,8 +328,7 @@ section:not(:last-child)::after {
 
   .work-image {
     max-width: 350px;
-    max-height: 225px;
-    max-width: 95%;
+    max-height: 250px;
     border: 6px solid #fff;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
