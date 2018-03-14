@@ -104,9 +104,16 @@ function applyImage(img, src) {
   img.classList.add('fade-in');
 }
 
-// images[0].addEventListener('load', function() {
-//   console.log(this.naturalWidth);
-//   console.log(this.naturalHeight);
-// });
+function loadHeroImage() {
+  let header = document.getElementsByTagName('header')[0];
+  setTimeout(function() {
+    // header.style.opacity = 0;
+    header.style.visibility = 'hidden';
+    header.style.opacity = 0;
+    header.classList.add('fade-in');
+    header.style.cssText = 'background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)) center bottom / cover, url("img/mountains.jpg")';
+    header.style.cssText += 'background-position: bottom; background-size: cover;';
+	}, 500);
+}
 
-// console.log(images)
+window.onload = loadHeroImage;
