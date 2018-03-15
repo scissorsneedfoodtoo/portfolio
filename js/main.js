@@ -104,9 +104,11 @@ function applyImage(img, src) {
   img.classList.add('fade-in');
 }
 
-// images[0].addEventListener('load', function() {
-//   console.log(this.naturalWidth);
-//   console.log(this.naturalHeight);
-// });
+function loadHeroImage() {
+  const heroImage = document.getElementsByClassName('mountains')[0];
 
-// console.log(images)
+  heroImage.src = 'img/mountains.jpg';
+  heroImage.classList.add('fade-in');
+}
+
+window.onload = loadHeroImage;
