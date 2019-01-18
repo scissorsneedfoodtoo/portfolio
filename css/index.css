@@ -11,9 +11,9 @@ body {
 }
 
 header {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains-placeholder.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains-placeholder.jpg');
   background-position: bottom;
-  background-size: cover; */
+  background-size: cover;
   height: 90vh;
 }
 
@@ -81,7 +81,6 @@ nav a:hover {
 
 .title {
   text-align: center;
-  /*font-size: 5.625rem;*/
   font-weight: 700;
   color: white;
   letter-spacing: 0.05em;
@@ -289,9 +288,12 @@ section:not(:last-child)::after {
 }
 
 @media (min-width: 760px) { /* about iPad resolution */
-
   .title {
     font-size: 2.2em;
+  }
+
+  .title span {
+    min-width: 331px; 
   }
 
   .kicker {
@@ -332,11 +334,9 @@ section:not(:last-child)::after {
     margin: 10px 25px 0 25px;
     font-size: 2.3em;
   }
-
 }
 
 @media (min-width: 780px) { /* restyle work section */
-
   .work-item {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
@@ -386,11 +386,9 @@ section:not(:last-child)::after {
   .work-description {
     grid-area: description;
   }
-
 }
 
 @media (min-width: 960px) {
-
   section {
     max-width: 750px;
   }
@@ -403,5 +401,4 @@ section:not(:last-child)::after {
     max-width: 400px;
     max-height: 300px;
   }
-
 }
