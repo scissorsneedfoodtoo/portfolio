@@ -14,13 +14,13 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains-placeholder.jpg');
   background-position: bottom;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
 }
 
 .mountains {
   position: absolute;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   object-fit: cover;
   object-position: bottom;
 }
@@ -32,7 +32,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: inline-block;
 }
 
@@ -43,7 +43,7 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 90vh;
+  height: 100vh;
 }
 
 nav {
@@ -106,7 +106,8 @@ nav a:hover {
 }
 
 .primary-content {
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  padding: 5%;
 }
 
 section {
@@ -120,7 +121,6 @@ section {
 /*for small grey line after sections that are not the last*/
 section:not(:last-child)::after {
   content: '';
-  /*border-bottom: 2px solid #dfe2e6;*/
   border-bottom: 2px solid #D8DADA;
   width: 300px;
   padding-top: 50px;
@@ -139,9 +139,12 @@ section:not(:last-child)::after {
   max-width: 150px;
   max-height: 150px;
   margin: 0 auto 30px;
-  /*margin: auto;*/
   border-radius: 100%;
 }
+
+/* .section-text {
+  padding: 0 2em;
+} */
 
 .about-text p {
   margin: 10px auto;
@@ -180,7 +183,7 @@ section:not(:last-child)::after {
 }
 
 .work-description {
-  margin: 1em 0 1.2em 0;
+  margin: 1em 0 1.4em 0;
   grid-area: text;
 }
 
@@ -213,7 +216,6 @@ section:not(:last-child)::after {
 
 .social-header {
   margin: auto;
-  /*font-size: .95em;*/
 }
 
 .social-icons {
@@ -221,6 +223,20 @@ section:not(:last-child)::after {
   margin: auto;
   justify-content: center;
   align-items: center;
+}
+
+/*link styling*/
+
+.work-links a:link,
+.contact-section a:link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.work-links a:visited,
+.contact-section a:visited {
+  text-decoration: none;
+  color: #333333;
 }
 
 .social-link {
@@ -232,27 +248,23 @@ section:not(:last-child)::after {
   color: #6F90B2;
 }
 
-/*link styling*/
-
-.contact-section a:link {
-  text-decoration: none;
-  color: #333333;
+.work-links a {
+  color: #6F90B2;
+  font-size: 1.1em;
+  margin: auto 15px;
 }
-
-.contact-section a:visited {
-  text-decoration: none;
-  color: #333333;
-}
-
+.work-links a:hover,
 .contact-section a:hover > strong {
   color: #333333;
 }
 
+.work-links a:hover,
 .contact-section a:hover {
   box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
 }
 
 /* for lazy loading images */
+
 .fade-in {
   animation-name: fadeIn;
   animation-duration: 1.3s;
@@ -310,8 +322,12 @@ section:not(:last-child)::after {
   }
 
   section {
-    max-width: 550px;
+    max-width: 650px;
   }
+
+  /* .section-text {
+    padding: 0 5%;
+  } */
 
   .selfie-pic {
     max-width: 180px;
@@ -320,6 +336,11 @@ section:not(:last-child)::after {
 
   .section-header {
     font-size: 2.2em;
+  }
+
+  .work-image {
+    max-width: 300px;
+    max-height: 200px;
   }
 
   .email-link {
@@ -374,17 +395,11 @@ section:not(:last-child)::after {
 
   .work-text {
     grid-area: text;
-    align-self: center;
     display: flex;
     flex-direction: column;
-  }
-
-  .work-title {
-    grid-area: header;
-  }
-
-  .work-description {
-    grid-area: description;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
   }
 }
 
@@ -396,6 +411,10 @@ section:not(:last-child)::after {
   nav {
     font-size: 1.2em;
   }
+
+  /* .section-text {
+    padding: 0;
+  } */
 
   .work-image {
     max-width: 400px;
