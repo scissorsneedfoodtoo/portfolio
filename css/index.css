@@ -60,19 +60,6 @@ nav span {
   height: 20px;
 }
 
-nav a {
-  font-size: .9em;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
-}
-
-nav a:hover {
-  color: #333;
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
-}
-
 .title-block {
   margin: auto;
   justify-content: center;
@@ -197,10 +184,6 @@ section:not(:last-child)::after {
   margin-bottom: 80px; /* extra white space at bottom */
 }
 
-.email-link, .social-link {
-  margin: auto;
-}
-
 .email-link {
   margin: 10px 0 35px 0;
   font-size: 1.1em;
@@ -227,16 +210,41 @@ section:not(:last-child)::after {
 
 /*link styling*/
 
-.work-links a:link,
-.contact-section a:link {
+nav a {
+  font-size: .9em;
+  font-weight: 700;
   text-decoration: none;
-  color: #333333;
+  color: white;
 }
 
+nav a:hover {
+  color: #333;
+  box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
+  padding-bottom: 6px;
+}
+
+.about-text a,
+.work-links a {
+  text-decoration: none;
+  color: #6F90B2;
+  font-weight: 500;
+}
+
+.contact-section a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #6F90B2;
+  display: inline-block;
+}
+
+.about-text a:visited,
 .work-links a:visited,
 .contact-section a:visited {
   text-decoration: none;
-  color: #333333;
 }
 
 .social-link {
@@ -244,23 +252,31 @@ section:not(:last-child)::after {
   font-size: 2em;
 }
 
-.contact-section strong {
-  color: #6F90B2;
-}
-
 .work-links a {
-  color: #6F90B2;
   font-size: 1.1em;
   margin: auto 15px;
 }
-.work-links a:hover,
-.contact-section a:hover > strong {
-  color: #333333;
-}
 
+.about-text a:hover,
 .work-links a:hover,
 .contact-section a:hover {
-  box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
+  color: #333;
+  padding-bottom: 5px;
+  box-shadow: inset 0 -2px 0 0 #333 /* emulate the border */
+}
+
+.email-link:hover > div {
+  color: #333;
+}
+
+/* subtract 5px from margin-bottom to prevent content from shifting */
+
+.email-link:hover {
+  margin: 10px 0 30px 0;
+}
+
+.social-link:hover {
+  margin: 10px 25px -5px 25px;
 }
 
 /* for lazy loading images */
