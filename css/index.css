@@ -183,7 +183,7 @@ section:not(:last-child)::after {
 }
 
 .work-description {
-  margin: 1em 0 1.4em 0;
+  margin: 1em 0;
   grid-area: text;
 }
 
@@ -399,7 +399,10 @@ section:not(:last-child)::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90%;
+  }
+
+  .work-title {
+    margin: 0 auto;
   }
 }
 
