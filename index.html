@@ -4,13 +4,12 @@
     <title>Kris Koishigawa</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   </head>
   <body>
-    <header style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('img/mountains-placeholder.jpg'); background-position: bottom;
-    background-size: cover;">
+    <header>
       <div class="gradient-layer">
         <img class="mountains">
       </div>
@@ -31,63 +30,110 @@
       <section class="about-section" id="about">
         <h2 class="section-header">About</h2>
         <img class="selfie-pic lazy-image" src="img/profile-pic-placeholder.jpg" data-src="img/profile-pic.jpg" width="180" height="180" alt="selfie">
-        <div class="about-text">
+        <div class="about-text section-text">
           <p>I've always loved a good story. It's what lead me to get a degree in English literature and go on to teach ESL abroad.</p>
-          <p>My goal as a teacher is to give students the tools to help them communicate with others. Now, I hope to do the same for people and businesses as a Web Developer.</p>
-          <p>In my spare time I've been digging into JavaScript and frameworks like React, building small web apps along the way.</p>
+          <p>My goal as a teacher was to give students the tools to help them communicate with others. Now, I hope to do the same for people and businesses as a Web Developer.</p>
+          <!-- <p>In my spare time I've been digging into JavaScript and frameworks like React, building small web apps along the way.</p> -->
+          <p>In my spare time I moderate and contribute to freeCodeCamp, and was named one of their <a href="https://medium.freecodecamp.org/announcing-our-freecodecamp-2018-top-contributor-award-winners-861da08a77e1" target="_blank">top contributors in 2018</a>.</p>
         </div>
       </section>
       <!-- end about section -->
       <section class="work-section" id="work">
         <h2 class="section-header">Work</h2>
         <div class="work-item">
-          <a href="https://scissorsneedfoodtoo.github.io/tic-tac-toe-react/">
-            <img class="work-image lazy-image" src="img/tic-tac-toe-react-placeholder.jpg" data-src="img/tic-tac-toe-react.jpg" width="400" height="300" alt="React.js Tic-Tac-Toe">
+          <a href="https://github.com/scissorsneedfoodtoo/index-watcher" target="_blank">
+            <img class="work-image lazy-image" src="img/index-watcher-placeholder.jpg" data-src="img/index-watcher.jpg" width="400" height="300" alt="Index Watcher Project">
+          </a>
+          <div class="work-text">
+            <h3 class="work-title">Index Watcher</h3>
+            <p class="work-description section-text">An AWS Lambda function that scrapes the latest price of an index fund, saves it to a database, and sends a notification after the stock market closes.</p>
+            <div class="work-links">
+              <a href="https://github.com/scissorsneedfoodtoo/index-watcher" target="_blank">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <a href="https://github.com/scissorsneedfoodtoo/bus-arrival-monitor" target="_blank">
+            <img class="work-image lazy-image" src="img/bus-arrival-monitor-placeholder.jpg" data-src="img/bus-arrival-monitor.jpg" width="400" height="300" alt="Bus Arrival Monitor Project">
+          </a>
+          <div class="work-text">
+            <h3 class="work-title">Bus Arrival Monitor</h3>
+            <p class="work-description section-text">An Express app designed to run on a Raspberry Pi that scrapes bus data, serves it as an API, and displays the arrival times on a website.</p>
+            <div class="work-links">
+              <a href="https://github.com/scissorsneedfoodtoo/bus-arrival-monitor" target="_blank">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <a href="https://scissorsneedfoodtoo.github.io/markdown-previewifier/" target="_blank">
+            <img class="work-image lazy-image" src="img/markdown-previewifier-placeholder.jpg" data-src="img/markdown-previewifier.jpg" width="400" height="300" alt="Markdown Previewifier Project">
+          </a>
+          <div class="work-text">
+            <h3 class="work-title">Markdown Previewifier</h3>
+            <p class="work-description section-text">A markdown previewer built in React.</p>
+            <div class="work-links">
+              <a href="https://github.com/scissorsneedfoodtoo/markdown-previewifier/" target="_blank">
+                GitHub
+              </a>
+              <a href="https://scissorsneedfoodtoo.github.io/markdown-previewifier/" target="_blank">
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work-item">
+          <a href="https://scissorsneedfoodtoo.github.io/tic-tac-toe-react/" target="_blank">
+            <img class="work-image lazy-image" src="img/tic-tac-toe-react-placeholder.jpg" data-src="img/tic-tac-toe-react.jpg" width="400" height="300" alt="React Tic-tac-toe Project">
           </a>
           <div class="work-text">
             <h3 class="work-title">Tic-Tac-Toe</h3>
-            <p class="work-description">A recreaction of Google's tic-tac-toe web app in React.js.</p>
+            <p class="work-description section-text">A recreaction of Google's tic-tac-toe web app in React.</p>
+            <div class="work-links">
+              <a href="https://github.com/scissorsneedfoodtoo/tic-tac-toe-react/" target="_blank">
+                GitHub
+              </a>
+              <a href="https://scissorsneedfoodtoo.github.io/tic-tac-toe-react/" target="_blank">
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
         <div class="work-item">
-          <a href="https://scissorsneedfoodtoo.github.io/simon-react/">
-            <img class="work-image lazy-image" src="img/simon-react-placeholder.jpg" data-src="img/simon-react.jpg" width="400" height="300" alt="React.js Simon Game">
+          <a href="https://scissorsneedfoodtoo.github.io/simon-react/" target="_blank">
+            <img class="work-image lazy-image" src="img/simon-react-placeholder.jpg" data-src="img/simon-react.jpg" width="400" height="300" alt="React Simon Game">
           </a>
           <div class="work-text">
             <h3 class="work-title">Simon</h3>
-            <p class="work-description">The classic handheld game written in React.js.</p>
+            <p class="work-description section-text">The classic handheld game written in React.</p>
+            <div class="work-links">
+              <a href="https://github.com/scissorsneedfoodtoo/simon-react/" target="_blank">
+                GitHub
+              </a>
+              <a href="https://scissorsneedfoodtoo.github.io/simon-react/" target="_blank">
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
-        <div class="work-item">
-          <a href="https://scissorsneedfoodtoo.github.io/fcc-camper-leaderboard/">
-            <img class="work-image lazy-image" src="img/fcc-camper-leaderboard-placeholder.jpg" data-src="img/fcc-camper-leaderboard.jpg" width="400" height="300" alt="React.js Tic-Tac-Toe">
-          </a>
-          <div class="work-text">
-            <h3 class="work-title">FreeCodeCamp Camper Leaderboard</h3>
-            <p class="work-description">A camper score leaderboard using FreeCodeCamp's brownie point API written in React.js.</p>
-          </div>
-        </div>
-        <div class="work-item">
-          <a href="https://scissorsneedfoodtoo.github.io/javascript-calculator/">
-            <img class="work-image lazy-image" src="img/javascript-calculator-placeholder.jpg" data-src="img/javascript-calculator.jpg" width="400" height="300" alt="JavaScript Calculator">
-          </a>
-          <div class="work-text">
-            <h3 class="work-title">JavaScript Calculator</h3>
-            <p class="work-description">Modeled after the stock Android calculator app that uses jQuery and Math.js.</p>
-          </div>
         </div>
       </section>
       <!-- end work section -->
       <section class="contact-section" id="contact">
         <h2 class="section-header">Contact</h2>
           <p class="social-header">Shoot me an email at</p>
-          <a class="email-link" href="mailto:kriskoishigawa@gmail.com"><strong>kriskoishigawa</strong>@<strong>gmail</strong>.com</a>
+          <a class="email-link" href="mailto:kriskoishigawa@gmail.com" target="_blank">
+            <div class="highlight">kriskoishigawa</div>@<div class="highlight">gmail</div>.<div class="highlight">com</div>
+          </a>
         <div class="social">
           <p class="social-header">Find me on</p>
           <div class="social-icons">
-            <a class="social-link" href="https://codepen.io/scissorsneedfoodtoo/"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-            <a class="social-link" href="https://github.com/scissorsneedfoodtoo"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a class="social-link" href="https://www.linkedin.com/in/kriskoishigawa/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="social-link" href="https://github.com/scissorsneedfoodtoo" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a class="social-link" href="https://www.linkedin.com/in/kriskoishigawa/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="social-link" href="https://codepen.io/scissorsneedfoodtoo/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
           </div>
         </div>
       </section>

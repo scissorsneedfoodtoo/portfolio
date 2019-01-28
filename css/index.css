@@ -11,16 +11,16 @@ body {
 }
 
 header {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains-placeholder.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('../img/mountains-placeholder.jpg');
   background-position: bottom;
-  background-size: cover; */
-  height: 90vh;
+  background-size: cover;
+  height: 100vh;
 }
 
 .mountains {
   position: absolute;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   object-fit: cover;
   object-position: bottom;
 }
@@ -32,7 +32,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: inline-block;
 }
 
@@ -43,7 +43,7 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 90vh;
+  height: 100vh;
 }
 
 nav {
@@ -60,19 +60,6 @@ nav span {
   height: 20px;
 }
 
-nav a {
-  font-size: .9em;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
-}
-
-nav a:hover {
-  color: #333;
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
-}
-
 .title-block {
   margin: auto;
   justify-content: center;
@@ -81,7 +68,6 @@ nav a:hover {
 
 .title {
   text-align: center;
-  /*font-size: 5.625rem;*/
   font-weight: 700;
   color: white;
   letter-spacing: 0.05em;
@@ -90,6 +76,7 @@ nav a:hover {
 }
 
 .title span {
+  max-width: 250px;
   display: inline-block;
   padding: .02em 0.5em;
   border: #fbfbfb solid 10px;
@@ -106,7 +93,8 @@ nav a:hover {
 }
 
 .primary-content {
-  padding: 0 20px;
+  /* padding: 0 20px; */
+  padding: 5%;
 }
 
 section {
@@ -120,7 +108,6 @@ section {
 /*for small grey line after sections that are not the last*/
 section:not(:last-child)::after {
   content: '';
-  /*border-bottom: 2px solid #dfe2e6;*/
   border-bottom: 2px solid #D8DADA;
   width: 300px;
   padding-top: 50px;
@@ -139,9 +126,12 @@ section:not(:last-child)::after {
   max-width: 150px;
   max-height: 150px;
   margin: 0 auto 30px;
-  /*margin: auto;*/
   border-radius: 100%;
 }
+
+/* .section-text {
+  padding: 0 2em;
+} */
 
 .about-text p {
   margin: 10px auto;
@@ -165,8 +155,8 @@ section:not(:last-child)::after {
 }
 
 .work-image {
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 264px;
+  max-height: 164px;
   border: 6px solid #fff;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -180,7 +170,7 @@ section:not(:last-child)::after {
 }
 
 .work-description {
-  margin: 1em 0 1.2em 0;
+  margin: 1em 0;
   grid-area: text;
 }
 
@@ -192,10 +182,6 @@ section:not(:last-child)::after {
   justify-content: center;
   align-items: center;
   margin-bottom: 80px; /* extra white space at bottom */
-}
-
-.email-link, .social-link {
-  margin: auto;
 }
 
 .email-link {
@@ -213,7 +199,6 @@ section:not(:last-child)::after {
 
 .social-header {
   margin: auto;
-  /*font-size: .95em;*/
 }
 
 .social-icons {
@@ -223,36 +208,79 @@ section:not(:last-child)::after {
   align-items: center;
 }
 
+/*link styling*/
+
+nav a {
+  font-size: .9em;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: #333;
+  box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
+  padding-bottom: 6px;
+}
+
+.about-text a,
+.work-links a {
+  text-decoration: none;
+  color: #6F90B2;
+  font-weight: 500;
+}
+
+.contact-section a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #6F90B2;
+  display: inline-block;
+}
+
+.about-text a:visited,
+.work-links a:visited,
+.contact-section a:visited {
+  text-decoration: none;
+}
+
 .social-link {
   margin: 10px 25px 0 25px;
   font-size: 2em;
 }
 
-.contact-section strong {
-  color: #6F90B2;
+.work-links a {
+  font-size: 1.1em;
+  margin: auto 15px;
 }
 
-/*link styling*/
-
-.contact-section a:link {
-  text-decoration: none;
-  color: #333333;
-}
-
-.contact-section a:visited {
-  text-decoration: none;
-  color: #333333;
-}
-
-.contact-section a:hover > strong {
-  color: #333333;
-}
-
+.about-text a:hover,
+.work-links a:hover,
 .contact-section a:hover {
-  box-shadow: inset 0 -2px 0 0 #333; /* emulate the border */
+  color: #333;
+  padding-bottom: 5px;
+  box-shadow: inset 0 -2px 0 0 #333 /* emulate the border */
+}
+
+.email-link:hover > div {
+  color: #333;
+}
+
+/* subtract 5px from margin-bottom to prevent content from shifting */
+
+.email-link:hover {
+  margin: 10px 0 30px 0;
+}
+
+.social-link:hover {
+  margin: 10px 25px -5px 25px;
 }
 
 /* for lazy loading images */
+
 .fade-in {
   animation-name: fadeIn;
   animation-duration: 1.3s;
@@ -288,9 +316,12 @@ section:not(:last-child)::after {
 }
 
 @media (min-width: 760px) { /* about iPad resolution */
-
   .title {
     font-size: 2.2em;
+  }
+
+  .title span {
+    min-width: 331px; 
   }
 
   .kicker {
@@ -307,8 +338,12 @@ section:not(:last-child)::after {
   }
 
   section {
-    max-width: 550px;
+    max-width: 650px;
   }
+
+  /* .section-text {
+    padding: 0 5%;
+  } */
 
   .selfie-pic {
     max-width: 180px;
@@ -317,6 +352,11 @@ section:not(:last-child)::after {
 
   .section-header {
     font-size: 2.2em;
+  }
+
+  .work-image {
+    max-width: 300px;
+    max-height: 200px;
   }
 
   .email-link {
@@ -331,11 +371,9 @@ section:not(:last-child)::after {
     margin: 10px 25px 0 25px;
     font-size: 2.3em;
   }
-
 }
 
 @media (min-width: 780px) { /* restyle work section */
-
   .work-item {
     display: grid;
     grid-template-columns: 2fr 1.5fr;
@@ -373,23 +411,18 @@ section:not(:last-child)::after {
 
   .work-text {
     grid-area: text;
-    align-self: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .work-title {
-    grid-area: header;
+    margin: 0 auto;
   }
-
-  .work-description {
-    grid-area: description;
-  }
-
 }
 
 @media (min-width: 960px) {
-
   section {
     max-width: 750px;
   }
@@ -398,9 +431,12 @@ section:not(:last-child)::after {
     font-size: 1.2em;
   }
 
+  /* .section-text {
+    padding: 0;
+  } */
+
   .work-image {
     max-width: 400px;
     max-height: 300px;
   }
-
 }

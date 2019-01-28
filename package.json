@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A simple portfolio page for showing off some of my projects. Check it out at https://kriskoishigawa.com.",
+  "main": "index.js",
+  "scripts": {
+    "start": "reload -b",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scissorsneedfoodtoo/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scissorsneedfoodtoo/portfolio/issues"
+  },
+  "homepage": "https://github.com/scissorsneedfoodtoo/portfolio#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "reload": "^2.4.0"
+  }
+}
