@@ -11,8 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)),
-    url("../img/mountains-placeholder.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15));
   background-position: bottom;
   background-size: cover;
   height: 100vh;
@@ -279,42 +278,6 @@ nav a:hover {
 
 .social-link:hover {
   margin: 10px 25px -5px 25px;
-}
-
-/* for lazy loading images */
-
-.fade-in {
-  animation-name: fadeIn;
-  animation-duration: 1.3s;
-  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
-  animation-fill-mode: forwards;
-}
-
-.fade-out {
-  animation-name: fadeOut;
-  animation-duration: 1.3s;
-  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
 }
 
 @media (min-width: 760px) {
