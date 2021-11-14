@@ -3,8 +3,8 @@ const images = document.querySelectorAll('.lazy-image');
 const config = {
   // If the image gets within 50px in the Y axis, start the download
   rootMargin: '50px 0px',
-  threshold: 0.01
-}
+  threshold: 0.01,
+};
 
 // The observer for the images on the page
 let imageCount = images.length;
@@ -17,15 +17,15 @@ if (!('IntersectionObserver' in window)) {
   // The Intersection Observer API is supported -- lazy load images
   observer = new IntersectionObserver(onIntersection, config);
 
-  images.forEach(image => {
+  images.forEach((image) => {
     observer.observe(image);
   });
 }
 
 /**
-* Fetchs the image for the given URL
-* @param {string} url
-*/
+ * Fetchs the image for the given URL
+ * @param {string} url
+ */
 function fetchImage(url) {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -36,31 +36,33 @@ function fetchImage(url) {
 }
 
 /**
-* Preloads the image
-* @param {object} image
-*/
+ * Preloads the image
+ * @param {object} image
+ */
 function preloadImage(image) {
   const src = image.dataset.src;
   if (!src) {
     return;
   }
 
-  return fetchImage(src).then(() => { applyImage(image, src); });
+  return fetchImage(src).then(() => {
+    applyImage(image, src);
+  });
 }
 
 /**
-* Load all of the images immediately
-* @param {NodeListOf<Element>} images
-*/
+ * Load all of the images immediately
+ * @param {NodeListOf<Element>} images
+ */
 function loadImagesImmediately(images) {
-  return images.forEach(image => {
+  return images.forEach((image) => {
     preloadImage(image);
   });
 }
 
 /**
-* Disconnect the observer
-*/
+ * Disconnect the observer
+ */
 function disconnect() {
   if (!observer) {
     return;
@@ -70,9 +72,9 @@ function disconnect() {
 }
 
 /**
-* On intersection
-* @param {array} entries
-*/
+ * On intersection
+ * @param {array} entries
+ */
 function onIntersection(entries) {
   // Disconnect if we've loaded all the images
   if (imageCount === 0) {
@@ -80,7 +82,7 @@ function onIntersection(entries) {
   }
 
   // Loop through the entries
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // Check if in viewport
     if (entry.intersectionRatio > 0) {
       imageCount--;
@@ -93,10 +95,10 @@ function onIntersection(entries) {
 }
 
 /**
-* Apply the image
-* @param {object} img
-* @param {string} src
-*/
+ * Apply the image
+ * @param {object} img
+ * @param {string} src
+ */
 function applyImage(img, src) {
   // Prevent this from being lazy loaded a second time
   img.classList.add('lazy-image--handled');
