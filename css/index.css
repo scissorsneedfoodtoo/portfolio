@@ -134,10 +134,6 @@ section:not(:last-child)::after {
   border-radius: 100%;
 }
 
-/* .section-text {
-  padding: 0 2em;
-} */
-
 .about-text p {
   margin: 10px auto;
 }
@@ -190,6 +186,7 @@ section:not(:last-child)::after {
 }
 
 .email-link {
+  display: flex;
   margin: 10px 0 35px 0;
   font-size: 1.1em;
 }
