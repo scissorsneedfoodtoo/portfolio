@@ -11,8 +11,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)),
-    url("../img/mountains-placeholder.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15));
   background-position: bottom;
   background-size: cover;
   height: 100vh;
@@ -134,10 +133,6 @@ section:not(:last-child)::after {
   border-radius: 100%;
 }
 
-/* .section-text {
-  padding: 0 2em;
-} */
-
 .about-text p {
   margin: 10px auto;
 }
@@ -190,6 +185,7 @@ section:not(:last-child)::after {
 }
 
 .email-link {
+  display: flex;
   margin: 10px 0 35px 0;
   font-size: 1.1em;
 }
@@ -231,7 +227,7 @@ nav a:hover {
 .about-text a,
 .work-links a {
   text-decoration: none;
-  color: #6f90b2;
+  color: #6372ab;
   font-weight: 500;
 }
 
@@ -242,7 +238,7 @@ nav a:hover {
 }
 
 .highlight {
-  color: #6f90b2;
+  color: #6372ab;
   display: inline-block;
 }
 
@@ -282,42 +278,6 @@ nav a:hover {
 
 .social-link:hover {
   margin: 10px 25px -5px 25px;
-}
-
-/* for lazy loading images */
-
-.fade-in {
-  animation-name: fadeIn;
-  animation-duration: 1.3s;
-  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
-  animation-fill-mode: forwards;
-}
-
-.fade-out {
-  animation-name: fadeOut;
-  animation-duration: 1.3s;
-  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
 }
 
 @media (min-width: 760px) {
